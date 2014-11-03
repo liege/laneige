@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Cache-Control" content="no-transform " />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+	<link rel="stylesheet" href="css/style.css">
+	<title>Laneige</title>	
+</head>
+<body>
+	<section class="p1">
+		<a href="javascript:;" class="btn"></a>
+	</section>
+	<section class="p2">
+		<div class="header clear">
+			<div class="pic"></div>
+			<div class="txt"></div>
+			<p id='timer'>已用时间：<span>0</span></p>
+		</div>
+		<ul id="list" class='clear'></ul>
+		<div class="mask"><a href="javascript:;" id='begin' class="btn"></a></div>
+		<div class="hint"></div>
+	</section>	
+	<section class="p3">
+		<div class="bg"></div>
+		<div class="mask">
+			<a href="javascript:;" class="btn"></a>
+		</div>
+	</section>	
+	<section class="p4">
+		<div class="prize1 add"></div>
+		<div class="prize2 add"></div>
+		<div class="prize3"></div>		
+	</section>
+	<section class="p5">		
+		<form action="">
+			<div class="control-group"><label for="">收货人</label><input placeholder='填写姓名' type="text"></div>
+			<div class="control-group"><label for="">手机号</label><input id='phone' pattern="[0-9]{11}" placeholder='填写11位手机号码' type="number"><span class='hint'></span></div>
+			<div class="control-group"><label for="">收货地址</label><input placeholder='省市街道门牌信息' type="text"></div>
+			<div class="control hint">
+				<p>我们将在2周内安排发货</p>
+				<p>请耐心等待哟！</p>
+			</div>
+			<div class="control"><a class='btn' href="javascript:;">点击提交</a></div>
+		</form>
+	</section>
+	<div id="loading_layer"><span class="loading_box"></span></div>
+	<script src='js/new_wxshare.js'></script>
+	<script src='js/zepto.js'></script>
+	<script src='js/main.js'></script>
+	<script>
+		//加载完执行
+		window.onload = function(){
+			setTimeout(function(){
+				// $('#section li:first-child').removeClass('hide').addClass('show'),5000;
+				$('#loading_layer').hide();
+				//第一页
+				$('.p1').show();
+			},false);
+		}
+	</script>
+</body>
+</html>

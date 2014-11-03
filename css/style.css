@@ -1,0 +1,84 @@
+*{padding: 0;margin: 0;}
+body{color: #fff;}
+#list{ list-style: none; width: 318px;}
+#list li{width: 104px;height: 96px; /*border: 3px solid #000;*/ margin: 1px; 
+	-webkit-box-sizing:border-box; float: left;
+	background-size: cover;
+	position: relative;
+}
+#list li.select:after{ content: ""; background: url(../images/currentMask.png); background-size: cover; 
+width: 104px; height: 96px; position: absolute;left: 0;top: 0;}
+#list img{width: 100%;height: 100%;}
+.clear{overflow: hidden;}
+#loading_layer{background: rgba(0,0,0,.6); position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 99;}
+#loading_layer .loading_box{position: absolute; width: 60px; height: 60px; left: 50%; top: 50%;  margin: -30px 0 0 -30px; background: url(../images/load.gif) no-repeat; background-size: 60px;}
+
+
+section{height: 100%; position: absolute; width: 100%; left: 0; top: 0;
+	-webkit-transform: translate3d(0,0,0); display: none; overflow: hidden;}
+.currentPage{-webkit-animation:rotates 1s ease-in-out 1 both; opacity: 1; display: block;}
+.p1{background: url(../images/p1bg.jpg) no-repeat left 0; background-size: cover; z-index: 1;} 
+.p1 .btn{background: url(../images/p1btn.png) no-repeat left top; background-size: cover; display: block;
+	width: 156px; height: 45px; margin: 420px auto 0;
+}
+
+.header{position: relative;}
+#timer{position: absolute; left: 0; bottom: 0; padding-left: 15px;}
+.p2{background: #000;z-index: 2;}
+.p2 ul{ margin:10px auto 0; }
+.pic{width: 115px;height: 106px;background: url(../images/min.jpg) no-repeat 0 0; background-size: cover; float: right;}
+.txt{width: 176px;height: 23px;background: url(../images/p2title.png) no-repeat 0 0; 
+	background-size: cover; float: left; margin:40px 0 0 15px; }
+.p2 .hint{ width: 206px; height: 42px; background: url(../images/p2hint.png) no-repeat 0 0; background-size: cover; 
+margin: 20px auto 0;
+}
+.p2 .mask{width: 100%; height: 100%; position: absolute;
+	background: url(../images/p2mask.png) no-repeat 0 -68px; background-size: cover; 
+	vertical-align: middle; line-height: 100%; text-align: center; top: 0;}
+.p2 .btn{background: url(../images/p2begin.png) no-repeat left top; background-size: cover; display: block;
+	width: 135px; height: 33px; margin: 320px auto 0;
+}
+.p3{z-index: 3;}
+.p3 .btn{background: url(../images/p3btn.png) no-repeat left top; background-size: cover; display: block;
+	width: 125px; height: 45px; margin: 380px auto 0;
+}	
+.p3 .mask{width: 100%; height: 100%; position: absolute;
+	background: url(../images/p3mask.png) no-repeat 0 0 rgba(0,0,0,.5); background-size: 100%; 
+	vertical-align: middle; line-height: 100%; text-align: center; top: 0;}
+.p3 .bg{background: url(../images/min.jpg) no-repeat left top; background-size: cover; display: block;
+	width: 200%; height: 100%;
+	-webkit-filter: blur(5px);
+	-webkit-animation:move 15s linear infinite both;
+}
+@-webkit-keyframes move{
+	0%{-webkit-transform:translate(0,0);}
+	50%{-webkit-transform:translate(-320px,0);}
+	100%{-webkit-transform:translate(0px,0);}
+}
+@-webkit-keyframes rotates{
+	0%{-webkit-transform: translate3d(0,1200px,0); opacity: 1;}
+	100%{-webkit-transform: translate3d(0,0,0); opacity: 1;}
+}
+.p4{background: url(../images/p4bg.jpg) no-repeat left 0; background-size: cover;z-index: 4;} 
+.p4 div{width: 100%; height: 466px; position: absolute; top: 0; left: 0; display: none;}
+.p4 .prize1{background: url(../images/prize1.png) no-repeat left -68px;background-size: cover; }
+.p4 .prize2{background: url(../images/prize2.png) no-repeat left -68px;background-size: cover; }
+.p4 .prize3{background: url(../images/prize3.png) no-repeat left -68px;background-size: cover; }
+.p5{ color: #999; padding-top: 50px;z-index: 5; background: #fff;}
+.control-group{border-bottom: 1px solid #c2c2c2; padding: 20px;}
+.p5 label{min-width:80px; display: inline-block; font-size: 18px; font-weight: bold; float: left; padding: 4px 0;}
+.p5 input[type=text],input[type=number]{border:none; outline: none; color: #c2cacc; width: 200px; padding: 4px 0; font-size: 18px;}
+.p5 .control{font-size: 18px; font-weight: bold; text-align: center; margin-top: 50px;}
+.p5 .btn{ padding: 10px 30px; border: 1px solid #c2c2c2; border-radius: 4px; background: #fff; text-decoration: none; color: #999;}
+span.hint{font-size: 12px; display: block; text-align: right;}
+
+
+
+@media screen and (min-width: 320px) {
+.p1 .btn{background: url(../images/p1btn.png) no-repeat left top; background-size: cover; display: block;
+	width: 156px; height: 45px; margin: 320px auto 0;
+}
+.p3 .btn{background: url(../images/p3btn.png) no-repeat left top; background-size: cover; display: block;
+	width: 125px; height: 45px; margin: 350px auto 0;
+}	
+}
